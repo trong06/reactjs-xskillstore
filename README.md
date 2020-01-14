@@ -15,3 +15,12 @@
   + Các file .env chỉnh sửa lại giá trị của**REACT_APP_API_ENDPOINT** thành Tên miền của **API** bạn dùng
   + **VD Localhost:** REACT_APP_API_ENDPOINT = http://localhost:8000 (Port server 8000 và đang chạy localhost)
   + **VD Đã up api lên host:** REACT_APP_API_ENDPOINT = DOMAIN của hosting đã up folder server api lên
+
+
+>	Created by Dương Đức Trọng
+
+>	Github: https://github.com/trong06
+
+>	Codepen: https://codepen.io/CodeEN
+
+>	Facebook: https://www.facebook.com/trong.duong.77398
