@@ -2,7 +2,7 @@
 
 #Built by Front end [Reactjs], Backend [Nodejs-Expressjs], Database [Mongodb]
 
-#Tutorial using server
+#Tutorial using my project
 - Folder server (Chạy server : **npm start**)
   + File .env chỉnh sửa để hoạt động
     + DTB_TEST=Tên database mongodb chạy localhost
