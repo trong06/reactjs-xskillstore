@@ -1,0 +1,119 @@
+.modal-image {
+    &__image {
+        width: 100%;
+        cursor: pointer;
+    }
+    &__modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        &__content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: effectZoom .5s;
+            &__img {
+                max-width: 600px;
+                display: block;
+            }
+            &__detail {
+                padding: 10px;
+                background: $light;
+                &__author {
+                    color: $dark;
+                    @include flex-JusAlign(inherit,center);
+                    &__child {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background: $light;
+                        border: 2px solid $grey;
+                    }
+                    &__name {
+                        font-weight: bold;
+                        margin-left: 10px;
+                    }
+                }
+                &__para {
+                    margin-top: 20px;
+                    color:$grey;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    &--active {
+        display: block;
+    }
+}
+
+@keyframes effectZoom {
+    from {
+        opacity: 0.5;
+        // transform: scale(0) translate(-50%,-50%);
+    }
+    to {
+        opacity: 1;
+        // transform: scale(1) translate(-50%,-50%);
+    }
+}
+
+@include Tablet {
+    .modal-image {
+        &__image {
+        }
+        &__modal {
+            &__content {
+                &__img {
+                    max-width: 450px;
+                }
+                &__detail {
+                    
+                    &__author {
+                        
+                        &__child {
+                            
+                        }
+                        &__name {
+                            
+                        }
+                    }
+                    &__para {
+                    }
+                }
+            }
+        }
+    }
+}
+@include MobileL {
+    .modal-image {
+        &__image {
+        }
+        &__modal {
+            &__content {
+                &__img {
+                    max-width: 350px;
+                }
+                &__detail {
+                    
+                    &__author {
+                        
+                        &__child {
+                            
+                        }
+                        &__name {
+                            
+                        }
+                    }
+                    &__para {
+                    }
+                }
+            }
+        }
+    }
+}

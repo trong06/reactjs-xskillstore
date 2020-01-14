@@ -1,0 +1,28 @@
+.cart-products {
+    margin-top: 5px;
+    &__image {
+        display: inline-block;
+        width: 25%;
+        object-fit: cover;
+        height: 70px;
+    }
+    &__content {
+        display: inline-block;
+        margin-left: 5px;
+        transform: translate(0, -15px);
+        &__title {
+            margin: 5px 0;
+            font-size: 12px;
+            &__child {
+                color: $orange;
+            }
+        }
+        &__price, &__size, &__amount {
+            font-size: 11px;
+            display: block;
+        }
+        &__price {
+            font-weight: bold;
+        }
+    }
+}

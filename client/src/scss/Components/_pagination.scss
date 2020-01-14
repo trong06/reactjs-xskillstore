@@ -1,0 +1,17 @@
+.pagination {
+
+}
+.pagination-custom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    & button {
+        display: inline-block;
+        width: 100px;
+        background: $dark;
+        padding: 10px;
+    }
+    & button:nth-child(even) {
+        background: $orange;
+    }
+}

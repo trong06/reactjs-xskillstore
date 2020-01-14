@@ -1,0 +1,39 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: $dark-grey;
+    & td, & th {
+        border: 1px solid $grey-custom-2;
+        padding: 8px;
+        font-size: 14px;
+    }
+    & > thead {
+        border-bottom: 2px solid $grey-custom-2;
+        // background: $grey-custom-2;
+        color: $grey;
+        & > tr {
+            text-align: left;
+            & > th {
+                background: $violet;
+                color: white;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    & > tbody {
+        & > tr {
+            &:nth-child(odd) {
+                background: $grey-custom-2;
+            }
+            & > td {
+                & > a {
+                    text-decoration: none;
+                    color: $dark-grey;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

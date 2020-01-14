@@ -1,0 +1,30 @@
+.topbar {
+    padding: 5px;
+    background: $dark;
+    color: $light;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    justify-content: flex-end;
+    &__link {
+        color: $light;
+        text-decoration: none;
+        margin: 0 10px;
+        &__icon {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__link--cart {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@include MobileL {
+    .topbar {
+        
+    }
+}

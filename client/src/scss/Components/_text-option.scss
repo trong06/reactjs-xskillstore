@@ -1,0 +1,16 @@
+.text-option {
+    color: $grey;
+    border-right: 2px solid $light-grey;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    cursor: context-menu;
+    &--changed {
+        color: $dark;
+        font-size: 1.5em;
+    }
+}

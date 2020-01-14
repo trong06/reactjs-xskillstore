@@ -1,0 +1,27 @@
+@include FormPatternOne($orange, $light, 800px, 50%, 500px, "https://source.unsplash.com/K4mSJ7kc0As/600x800");
+// .login-page {
+//     background: $orange;
+//     height: 100vh;
+//     padding: 20px 0;
+//     &__box {
+//         @include flex-JusAlign(center, center);
+//         max-width: 800px;
+//         margin: 30px auto;
+//         border-radius: 10px;
+//         background: $light;
+//         &__image {
+//             background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
+//             background-size: cover;
+//             width: 50%;
+//             height: 500px;
+//             background-position: center;
+//             border-radius: 10px 0 0 10px;
+//         }
+//         &__form {
+//             margin-left: 5px;
+//             text-align: center;
+//             padding: 10px;
+//         }
+//     }
+// }
+

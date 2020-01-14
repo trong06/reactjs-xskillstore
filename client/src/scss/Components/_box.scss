@@ -1,0 +1,19 @@
+.box {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px $grey-custom-1;
+    &__title {
+        color: $violet;
+        display: block;
+        background: $light-violet;
+        margin: auto;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid $grey-custom-2;
+    }
+    &__content {
+        padding: 15px;
+        background: white;
+        border-radius: 0 0 5px 5px;
+    }
+}

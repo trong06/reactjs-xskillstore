@@ -1,0 +1,22 @@
+.search {
+    display: flex;
+    align-items: center;
+    &__input {
+        padding: 11px;
+        border: 0;
+        background: $light-violet;
+        outline: 0;
+        border-radius: 5px 0 0 5px;
+        width: 20%;
+    }
+    &__btn {
+        background: $violet;
+        border: 0;
+        outline: 0;
+        width: 40px;
+        height: 40px;
+        color: $light;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+    }
+}

@@ -1,0 +1,18 @@
+.button {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    background: $dark;
+    padding: 8px 20px;
+    border: 0;
+    color: $light;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    &--orange {
+        background: $orange;
+    }
+    &--violet {
+        background: $violet;
+    }
+}

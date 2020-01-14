@@ -1,0 +1,79 @@
+.box-dropdown {
+    &__title {
+        text-transform: uppercase;
+        color: $light-grey-opacity;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+.dropdown {
+    &__btn {
+        text-align: left;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        padding: 15px 15px 15px 0;
+        color: $light;
+        cursor: pointer;
+        &__title {
+            margin-left: 5px;
+        }
+        &__icon:first-child {
+            color: $light-grey-opacity;
+            font-size: 16px;
+            &:hover {
+                color: $light;
+            }
+        }
+        &__icon:last-child {
+            float: right;
+            font-size: 16px;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    &__content {
+        display: none;
+        overflow: hidden;
+        border-radius: 10px;
+        background: $light;
+        padding: 10px;
+        font-size: 14px;
+        animation: dropDownEffect 1s;
+        &__title {
+            display: block;
+            color: $grey-custom-1;
+            padding: 10px;
+        }
+        &__text {
+            display: block;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: $dark;
+            &:hover {
+                background: $grey-custom-2;
+            }
+        }
+    }
+    &--active {
+        display: block;
+    }
+    &--clicked {
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+@keyframes dropDownEffect {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

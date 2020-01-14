@@ -1,0 +1,22 @@
+.portfolio {
+    &__title {
+        font-size: 1.8em;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        padding: 10px 0 40px;
+    }
+}
+
+@include Tablet {
+    .portfolio {
+        &__title {
+            font-size: 1.6em;
+        }
+    }
+}

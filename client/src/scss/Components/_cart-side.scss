@@ -1,0 +1,67 @@
+.cart-side {
+    &__info {
+        position: fixed;
+        top: 45%;
+        right: 0px;
+        background: $orange;
+        padding: 10px;
+        cursor: pointer;
+        &__count, &__image {
+            display: block;
+            text-align: center;
+        }
+        &__count {
+            color: $light;   
+        }
+        &__image {
+            margin-top: 10px;
+            width: 25px;
+        }
+    }
+    &__detail {
+        display: none;
+        position: fixed;
+        top: 30%;
+        right: 45px;
+        padding: 10px;
+        background: $light-grey-light;
+        width: 300px;
+        border-bottom: 1px dashed $dark;
+        animation: effectCart 1s;
+        &__title {
+            margin: 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid $dark;
+        }
+    }
+    &__total {
+        padding-top: 10px;
+        border-top: 2px solid $dark;
+        font-weight: 700;
+        font-size: 12px;
+        span {
+            float: right;
+            color: $orange;
+            font-size: 14px;
+        }
+    }
+    &__direction {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        text-align: center;
+    }
+    &--active {
+        display: block;
+    }
+}
+
+@keyframes effectCart {
+    from {
+        opacity: 0;
+        transform: translate(50%,0);
+    }
+    to {
+        opacity: 1;
+    }
+}

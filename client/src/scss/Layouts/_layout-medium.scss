@@ -1,0 +1,10 @@
+.layout-medium {
+    max-width: 1180px;
+    margin: auto;
+}
+
+@include Laptop {
+    .layout-medium {
+        padding: 15px;
+    }
+}

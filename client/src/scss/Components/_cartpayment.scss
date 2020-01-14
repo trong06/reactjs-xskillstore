@@ -1,0 +1,42 @@
+.card-product-payment {
+    display: grid;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-gap: 15px;
+    align-items: center;
+    margin: 15px 0;
+    &__image {
+        width: 100%;
+        height: 160px;
+        &__child {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__detail {
+        &__title {
+            font-size: 20px;
+            &__child {
+                text-decoration: none;
+                color: $dark;
+            }
+        }
+        &__price {
+            color: $grey;
+            margin: 20px 0;
+        }
+        &__quantity {
+
+        }
+    }
+    &__total {
+        &__money {
+            color: $orange;
+            text-align: right;
+        }
+        &__status {
+            color: $orange;
+            text-align: right;
+        }
+    }
+}

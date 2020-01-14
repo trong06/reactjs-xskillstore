@@ -1,0 +1,15 @@
+.color {
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    &__name {
+        display: block;
+        color: $light;
+        transform: translate(0,50%);
+    }
+    &__code {
+        display: block;
+        color: $light-grey;
+        transform: translate(0,50%);
+    }
+}

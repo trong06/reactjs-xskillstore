@@ -1,0 +1,40 @@
+.card-inside-text {
+    position: relative;
+    background: black;
+    &__image {
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__category {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &__title {
+            color: $light;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            &__child {
+                color: $light;
+                text-decoration: none;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+        &__text {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: $light;
+            margin: 10px 0;
+            font-weight: bold;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}

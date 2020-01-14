@@ -1,0 +1,236 @@
+.menu {
+    @include flex-JusAlign(space-around, center);
+    position: relative;
+    padding: 30px 0 5px;
+    &__image {
+        width: 100px;
+    }
+    &__nav {
+        @include flex-JusAlign(center, center);
+        &__link {
+            @include MenuNav($dark, 20px, 3px solid $light-grey);
+            transition: .5s;
+            text-align: center;
+            line-height: 2;
+            cursor: context-menu;
+            .submenu {
+                display: none;
+                position: absolute;
+                width: 100%;
+                color: $light;
+                top: 80%;
+                left: 0;
+                background: $dark;
+                z-index: 100;
+                &__choose {
+                    max-width: 1080px;;
+                    margin: 20px auto;
+                    &__option { 
+                        display: inline-block;
+                        opacity: 0.6;
+                        width: 23%;
+                        height: 23%;
+                        padding: 10px;
+                        transition: .5s;
+                        &__image {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &__title {
+                            text-align: center;
+                            &__child {
+                                text-decoration: none;
+                                color: $light;
+                            }
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &__items {
+                    @include flex-JusAlign(center,flex-start);
+                    padding: 40px 0;
+                    &__box {
+                        padding: 0 150px 20px 30px;
+                        &__title {
+                            margin-top: 0;
+                        }
+                        &__item {
+                            font-size: 14px;
+                            text-decoration: none;
+                            color: $light-grey;
+                            text-transform: capitalize;
+                            display: block;
+                            padding: 10px 0;
+                            font-weight: 400;
+                            line-height: 1;
+                            &:hover {
+                                color: $orange;
+                            }
+                        }
+                        &__item--weight {
+                            font-weight: 600;
+                        }
+
+                        &:nth-child(2) {
+                            border-left: 2px dashed $light-grey;
+                        }
+                    }
+                }
+            }
+            &__icon {
+                margin-left: 10px;
+                font-size: 12px;
+            }
+            &:hover {
+                color: $orange;
+            }
+            &:hover .submenu {
+                display: block;
+            }
+        }
+        &__link:last-child {
+            @include MenuNav($dark, 20px, none);
+        }
+    }
+    &__form {
+        &__search {
+            position: relative;
+            padding: 10px 15px 10px 30px;
+            border: 1px solid $light-grey;
+        }
+    }
+    &__bars {
+        width: 50px;
+        height: 50px;
+        display: none;
+        cursor: pointer;
+        background: $dark;
+        padding: 20px;
+        color: white;
+    }
+    &__responsive {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        padding: 5%;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+        z-index: 10;
+        &__item {
+            text-decoration: none;
+            color: $light;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            display: block;
+            padding: 20px 15px;
+            &__submenu {
+                text-align: end;
+                overflow-y: scroll;
+                display: none;
+                a {
+                    &:hover {
+                        background: $light-grey;
+                        color: $dark;
+                    }
+                }
+            }
+            &__cancel {
+                width: 10%;
+                // float: right;
+            }
+            &__icon {
+                float: right;
+            }
+            &:hover {
+                background: $dark;
+            }
+            &:first-child {
+                background: none;
+            }
+            // &:focus &__submenu {
+            //     display: block;
+            // }
+        }
+    }
+    &--fs-md {
+        font-size: 18px;
+    }
+    &--fs-sm {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &--active {
+        display: block;
+    }
+}
+
+@include Laptop {
+    .menu {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .menu__nav__link {
+        font-size: 1em;
+    }
+}
+
+@include Tablet {
+    .menu {
+        flex-direction: column;
+        &__image {
+        }
+        &__nav {
+            &__link {
+                .submenu {
+                    &__choose {
+                        
+                        &__option {
+                            width: 22%;
+                        }
+                    }
+                }
+            }
+        }
+        &__form {
+        }
+    }
+}
+
+@include MobileL {
+    .menu {
+        justify-content: space-between;
+        padding: 0;
+        flex-direction: row;
+        background: $dark;
+        &__image {
+            padding: 0 20px 0;
+            width: 20%;
+            border-right: 1px solid $light-grey;
+        }
+        &__nav {
+            display: none;
+            &__link {
+                .submenu {
+                    &__choose {
+                        
+                        &__option {
+                            width: 17%;
+                        }
+                    }
+                }
+            }
+        }
+        &__form {
+            display: none;
+        }
+        &__bars {
+            display: block;
+            width: 10%;
+        }
+    }
+}

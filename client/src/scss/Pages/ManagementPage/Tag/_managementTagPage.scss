@@ -1,0 +1,10 @@
+.manage-tag-page {
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+    &__main {
+        margin-top: 15px;
+    }
+}

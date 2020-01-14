@@ -1,0 +1,22 @@
+.banner {
+    &__image {
+        overflow: hidden;
+        height: 300px;
+        &__child {
+            transition: 1s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            &:hover {
+                transform:scale(1.5);
+            }
+        }
+    }
+    &__title {
+        &__child {
+            text-decoration: none;
+            color: $dark;
+            font-size: 1em;
+        }
+    }
+}

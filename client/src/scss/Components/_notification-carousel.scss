@@ -1,0 +1,71 @@
+.notification-carousel {
+    background: #f1f1f1;
+    padding: 15px 0;
+    &__content {
+        position: relative;
+        max-width: 1080px;
+        margin: auto;
+        font-size: 12px;
+        transition: .5s;
+        text-align: center;
+        overflow: hidden;
+        &__text {
+            display: none;
+            text-decoration: none;
+            color: $dark;
+            font-weight: 600;
+            font-style: italic;
+            opacity: 0.6;
+            animation: StartcarouselEff 1s;
+        }
+
+        &__prev, &__next {
+            position: absolute;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: .5s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__prev {
+            left: 0;
+            top: 0;
+        }
+        &__next {
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &--active {
+        display: block;
+    }
+}
+@keyframes StartcarouselEff {
+    from {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@keyframes EndcarouselEff {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+}
+
+@include Laptop {
+    .notification-carousel {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

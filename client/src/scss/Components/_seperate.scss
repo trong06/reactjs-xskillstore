@@ -1,0 +1,11 @@
+.seperate {
+    width: 100%;
+    border: 1px;
+    border-color: $light-grey;
+    &--dashed {
+        border-style: dashed;
+    }
+    &--solid {
+        border-style: solid;
+    }
+}

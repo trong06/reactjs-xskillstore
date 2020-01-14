@@ -1,0 +1,13 @@
+.signup-email {
+    &__textbox, &__btn {
+        padding: 10px;
+        border: 1px solid $light-grey
+    }
+    &__textbox {
+        border-radius: 2px;
+    }
+    &__btn {
+        background: $dark;
+        color: $light;
+    }
+}

@@ -1,0 +1,53 @@
+.find-orders-page {
+    &__box {
+        margin: 50px 0;
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &__status {
+            &__title {
+    
+            }
+            &__products {
+                @include Grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 15px;
+            }
+        }
+    }
+}
+
+@include MobileL {
+    .find-orders-page {
+        &__box {
+            &__title {
+            }
+            &__status {
+                &__title {
+        
+                }
+                &__products {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+@include MobileS {
+    .find-orders-page {
+        &__box {
+            &__title {
+            }
+            &__status {
+                &__title {
+        
+                }
+                &__products {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}

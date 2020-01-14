@@ -1,0 +1,13 @@
+.create-article-page {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 15px;
+    &__main {
+        &__paragraph {
+            margin-top: 15px;
+            & .demo-editor {
+                height: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.collapse-text {
+    margin: 30px 0;
+    &__title {
+        cursor: context-menu;
+        color: $orange;
+        text-transform: uppercase;
+        &__icon {
+            margin-left: 10px;
+        }
+    }
+    &__content {
+        overflow: hidden;
+        display: none;
+        padding: 0;
+        animation: effectActive 1s;
+        &__text {
+            font-size: .9em;
+            list-style-type: none;
+            padding: 8px 10px 8px 20px;
+            display: block;
+            margin: 5px 0;
+            text-transform: capitalize;
+            color: $dark;
+            cursor: context-menu;
+            &__close {
+                width: 15px;
+                float: right;
+            }
+        }
+    }
+    &--active {
+        display: block;
+    }
+    &--changed {
+        background: $light-grey-light;
+        font-weight: bold;
+    }
+    &--color {
+        opacity: 0.6;
+        border: 2px solid black;
+    }
+}
+
+@keyframes effectActive {
+    from {
+        opacity: 0;
+        transform: translate(0, -10%);
+    }
+    to {
+        opacity: 1;
+    }
+}

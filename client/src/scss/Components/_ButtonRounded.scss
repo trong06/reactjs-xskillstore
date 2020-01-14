@@ -1,0 +1,24 @@
+.button-rounded {
+    display: block;
+    width: 85%;
+    border: 1px solid $light-grey;
+    outline: 0;;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: auto;
+    background: $orange;
+    color: $light;
+    transition: 1s;
+    box-shadow: 3px 3px 10px $light-grey;
+    text-decoration: none;
+    &:hover {
+        box-shadow: 0;
+    }
+    &--dark {
+        background: $dark;
+    }
+    &--orange {
+        background: $orange;
+    }
+}

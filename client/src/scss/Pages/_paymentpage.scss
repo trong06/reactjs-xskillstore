@@ -1,0 +1,77 @@
+.payment-page {
+    @include Grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 15px;
+    margin-top: 20px;
+    &__cart {
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &__products {
+            padding: 50px 0;
+        }
+        &__notice {
+            text-align: center;
+            margin: 100px 0;
+            color: $grey;
+        }
+    }
+    &__order {
+        &__coupon {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        &__info {
+            &__price {
+                font-weight: bold;
+                &__child {
+                    float: right;
+                }
+            }
+            &__promotion {
+                font-weight: bold;
+                &__child {
+                    font-weight: normal;
+                    float: right;
+                }
+            }
+        }
+        &__total {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 25px 0;
+            font-size: 18px;
+            &__child {
+                float: right;
+            }
+        }
+    }
+}
+
+@include Tablet {
+    .payment-page {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include MobileL {
+    .payment-page {
+        &__cart {
+            &__products {
+                & .box-cart {
+                    & .card-product-payment {
+                        text-align: center;
+                        grid-template-columns: 1fr;
+                        &__total {
+                            &__money, &__status, & > .button {
+                                float: none;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

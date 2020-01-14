@@ -1,0 +1,13 @@
+.input-group {
+    
+    &--grid {
+        @include Grid;
+        grid-gap: 15px;
+    }
+    &--group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &--multigroup {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

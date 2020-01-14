@@ -1,0 +1,23 @@
+.process {
+    padding: 5px;
+    background: $orange;
+    width: 100%;
+    color: $light;
+    font-weight: bold;
+    overflow: hidden;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    transition: 1s;
+    &--borderRadius {
+        border-radius: 20px;
+        text-align: center;
+    }
+    &--success {
+        background: $success;
+    }
+    &--danger {
+        background: $danger;
+    }
+}

@@ -1,0 +1,13 @@
+.social-side {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background: $dark;
+    padding: 10px;
+    &__icon {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin: 5px 0;
+    }
+}

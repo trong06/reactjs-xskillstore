@@ -1,0 +1,16 @@
+.box-o {
+    background: $light-grey-light;
+    padding: 15px;
+    &__title {
+        padding: 10px 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+        border-bottom: 2px solid $dark;
+        text-transform: uppercase;
+    }
+    &--sticky-top {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 15px;
+    }
+}

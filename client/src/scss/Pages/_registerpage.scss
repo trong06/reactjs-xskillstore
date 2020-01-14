@@ -1,0 +1,12 @@
+@include FormPatternOne($dark, $light, 1000px, 60%, 500px, "https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+
+.register-page {
+    &__flname {
+        @include flex-JusAlign(center, center);
+    }
+    & .formPattern-one__box {
+        &__image {
+            padding: 20px
+        }
+    }
+}
